@@ -1,11 +1,10 @@
-FROM rocker/r-ver:3.6.3
+FROM rocker/r-ver:4.1.2
 
 #Install aptitude for package installations
 RUN apt update -y && apt-get install apt-utils -y && apt install aptitude -y
 
-#Install debian packages
-RUN aptitude install libcurl4-openssl-dev -y &&\
-    aptitude install libssl-dev -y &&\
+#Install ubuntu packages
+RUN aptitude install libssl-dev -y &&\
     aptitude install libxml2-dev -y
 
 # install renv package
