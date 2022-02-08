@@ -15,7 +15,7 @@ WORKDIR /usr/src/orders
 # Copy . . 
 
 # Restore all the packages
-RUN Rscript -e "renv::restore()"
+RUN Rscript -e "renv::restore(prompt = FALSE)"
 
 CMD ["Rscript", "handle_data.r"]
 
